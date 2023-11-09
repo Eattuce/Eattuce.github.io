@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="ch-CN">
+  <head>
+    <meta charset="utf-8">
+    <title>{{ page.title }}</title>
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <a href="/index.html"><img src="/assets/images/succulent_farm.png" alt="logo" title="主页" class="logo"></a>
+    <a href="{{ page.url }}"><img src="/assets/images/top.png" alt="logo" title="返回顶部" class="top" id="totop" ></a>
+    <div id="totop">
+      <a href="javascript" id="btn"></a>
+    </div>
+  </head>
+  <body>
+    <header>
+      <h1>{{ page.title }}</h1>
+      {% include navigation.html %}
+    </header>
+
+    <section>
+      {{ content }}
+    </section>
+
+    <footer>
+      &copy; 2023-Nov-8 一个饥荒联机版模组
+    </footer>
+
+    <script type="text/javascript" src="/assets/js/totop.js"></script>
+  </body>
+</html>

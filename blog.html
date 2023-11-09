@@ -1,63 +1,14 @@
-<!doctype html>
-<html lang="ch-CN">
-  <head>
-    <meta charset="utf-8">
-    <title>内容</title>
-    <link rel="stylesheet" href="/assets/css/styles.css">
-    <a href="/index.html"><img src="/assets/images/succulent_farm.png" alt="logo" title="主页" class="logo"></a>
-    <a href="/blog.html"><img src="/assets/images/top.png" alt="logo" title="返回顶部" class="top" id="totop" ></a>
-    <div id="totop">
-      <a href="javascript" id="btn"></a>
-    </div>
-  </head>
-  <body>
-    <header>
-      <h1>内容</h1>
-      <nav>
-    
-      <a href="/" class="deactivate" >主页</a>
-    
-      <a href="/about.html" class="deactivate" >关于</a>
-    
-      <a href="/blog.html" class="current">内容</a>
-    
-      <a href="/staff.html" class="deactivate" >其他</a>
-    
-</nav>
-    </header>
-
-    <section>
-      <h1>Latest Posts</h1>
+---
+layout: default
+title: 内容
+---
+<h1>Latest Posts</h1>
 
 <ul>
-  
+  {% for post in site.posts %}
     <li>
-      <h2><a href="/2023/11/01/bananas.html">Bananas</a></h2>
-      <p>A banana is an edible fruit – botanically a berry – produced by several
-kinds of large herbaceous flowering plants in the genus Musa.</p>
-
+      <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+      {{ post.excerpt }}
     </li>
-  
-    <li>
-      <h2><a href="/2018/08/22/kiwifruit.html">Kiwifruit</a></h2>
-      <p>Kiwifruit (often abbreviated as kiwi), or Chinese gooseberry is the
-edible berry of several species of woody vines in the genus Actinidia.</p>
-
-    </li>
-  
-    <li>
-      <h2><a href="/2018/08/21/apples.html">Apples</a></h2>
-      <p>An apple is a sweet, edible fruit produced by an apple tree.</p>
-
-    </li>
-  
+  {% endfor %}
 </ul>
-    </section>
-
-    <footer>
-      &copy; 2023-Nov-8 一个饥荒联机版模组
-    </footer>
-
-    <script type="text/javascript" src="/assets/js/totop.js"></script>
-  </body>
-</html>

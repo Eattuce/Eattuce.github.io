@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="ch-CN">
+  <head>
+    <meta charset="utf-8">
+    <title>{{ page.title }}</title>
+    <link rel="stylesheet" href="/assets/css/styles.css">
+  </head>
+  <body>
+    <header>
+      <h1>{{ page.title }}</h1>
+      <nav class="nav">
+        <a href="{{ item.link }}" {% if page.url == item.link %}class="current" {%- else -%} class="deactivate" {% endif %}>{{ item.name }}</a>
+      </nav>
+  </header>
+
+  <section>
+    {{ content }}
+  </section>
+
+  <footer>
+    &copy; 2023-Nov-8 一个饥荒联机版模组
+  </footer>
+
+  </body>
+</html>
